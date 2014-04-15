@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: ce2df1f90af795a478d6b5b0bf5cce50
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: spritecompf_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 186
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 141
+        width: 61
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 97
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 50
+        width: 61
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 141
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_5
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 99
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 49
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 120
+        width: 95
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spritecompf_8
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 41
+        width: 95
+        height: 70
+      alignment: 9
+      pivot: {x: .489157259, y: .71091342}
+    - name: spritecompf_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 195
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
