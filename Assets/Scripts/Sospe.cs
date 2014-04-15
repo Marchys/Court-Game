@@ -5,6 +5,8 @@ public class Sospe : MonoBehaviour {
 
 	// caracteristiques
 	float velocitat = 5f;
+	public int sospi_num;
+	Cre_des_sos script_master;
 
 	// posicio actual
 	bool primera = false;
@@ -25,6 +27,7 @@ public class Sospe : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		script_master =transform.parent.gameObject.GetComponent<Cre_des_sos>();	
 		posicions_master=GameObject.FindWithTag("Posicions");
 		GameObject sospitosos_master= GameObject.FindWithTag("Master");
 		posi = sospitosos_master.GetComponent<Cre_des_sos>().li_posis;
@@ -74,7 +77,7 @@ public class Sospe : MonoBehaviour {
 		{
 			obj_pos--;
 			posi[3]=0;
-
+			script_master.array_total_sos[sospi_num]=0;
 		}
 		else obj_pos--;	
 		if(obj_pos==1)primera=true;

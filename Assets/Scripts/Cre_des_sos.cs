@@ -17,7 +17,7 @@ public class Cre_des_sos : MonoBehaviour {
 	// sospitosos actuals
 	public int[] li_posis = new int[4] {0, 0, 0, 0};
 	// tots sospitosos
-	int[] array_total_sos = new int[25];
+	public int[] array_total_sos = new int[25];
 	int fila_sos = 0;
 	//culpable
 	int culpable;
@@ -96,7 +96,9 @@ public class Cre_des_sos : MonoBehaviour {
 
 		GameObject sospi = Instantiate(p_base,or_sortida.position,Quaternion.identity) as GameObject;
 		sospi.transform.parent = GameObject.Find("Sospitosos").transform;
-
+		sospi.name ="sospi_"+fila_sos;
+		Sospe script_sos =sospi.GetComponent<Sospe>();
+		script_sos.sospi_num=fila_sos;
 		int sos_info = array_total_sos[fila_sos];
 
 		int cap_n = (sos_info / 10000) % 10;
@@ -148,7 +150,12 @@ public class Cre_des_sos : MonoBehaviour {
 				{
 				    fila_sos=0;
 				    while(array_total_sos[fila_sos]==0)fila_sos++;	
-			    }else while(array_total_sos[fila_sos]==0)fila_sos++;	
+				}else{
+					while(array_total_sos[fila_sos]==0){						
+						fila_sos++;
+						if(fila_sos>24)fila_sos=0;
+					}	
+				} 
 			//Debug.Log(fila_sos);
 						
 			}
@@ -159,20 +166,17 @@ public class Cre_des_sos : MonoBehaviour {
 			fills_Sospi=GetComponentsInChildren<Sospe>();
 			foreach(Sospe fill_sospi in fills_Sospi) fill_sospi.Seguent(false);
 			Crear_sospitos(fila_sos);
-			int temp_sosp=fila_sos;
-			if((fila_sos-4)<0){
-			temp_sosp=(fila_sos-4)+24;
-				}else{
-				temp_sosp+=-4;
-			}
-			array_total_sos[temp_sosp]=0;			
 			fila_sos++;				
-			if(fila_sos>24)
-			     {
+				if(fila_sos>24)
+				{
 					fila_sos=0;
 					while(array_total_sos[fila_sos]==0)fila_sos++;	
-			     }else while(array_total_sos[fila_sos]==0)fila_sos++;
-			//Debug.Log(fila_sos);
+				}else{
+					while(array_total_sos[fila_sos]==0){
+						fila_sos++;
+						if(fila_sos>24)fila_sos=0;
+					}	
+				} 
 			}	
 
 			yield return null;
