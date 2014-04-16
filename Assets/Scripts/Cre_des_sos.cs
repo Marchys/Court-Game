@@ -17,6 +17,7 @@ public class Cre_des_sos : MonoBehaviour {
 	// sospitosos actuals
 	public int[] li_posis = new int[4] {0, 0, 0, 0};
 	// tots sospitosos
+	[HideInInspector]
 	public int[] array_total_sos = new int[25];
 	int fila_sos = 0;
 	//culpable
@@ -53,6 +54,7 @@ public class Cre_des_sos : MonoBehaviour {
 	yield return StartCoroutine(Generar_lista_sospe());	
 	yield return StartCoroutine(Iniciar_joc());
     yield return StartCoroutine(Base_joc());
+	Debug.Log("fi");
 	}
 
 
