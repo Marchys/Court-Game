@@ -6,7 +6,7 @@ public class Cre_des_sos : MonoBehaviour {
 
 	public GameObject p_base;
 	public Transform or_sortida;
-
+	public GUIText text_fin;
 	//sprites sospitosos
 	public Sprite[] caps_spirites;
 	public Sprite[] ulls_spirites;
@@ -19,7 +19,7 @@ public class Cre_des_sos : MonoBehaviour {
 	// tots sospitosos
 	[HideInInspector]
 	public int[] array_total_sos = new int[25];
-	int fila_sos = 0;
+    int fila_sos = 0;
 	//culpable
 	int culpable;
 	int cul_cap;
@@ -54,6 +54,7 @@ public class Cre_des_sos : MonoBehaviour {
 	yield return StartCoroutine(Generar_lista_sospe());	
 	yield return StartCoroutine(Iniciar_joc());
     yield return StartCoroutine(Base_joc());
+	yield return StartCoroutine(Comp_en());
 	Debug.Log("fi");
 	}
 
@@ -94,11 +95,12 @@ public class Cre_des_sos : MonoBehaviour {
 
 	}
 
-	void Crear_sospitos(int fila_sos){
+	void Crear_sospitos(int fila_sos,bool last){
 
 		GameObject sospi = Instantiate(p_base,or_sortida.position,Quaternion.identity) as GameObject;
 		sospi.transform.parent = GameObject.Find("Sospitosos").transform;
 		sospi.name ="sospi_"+fila_sos;
+		if(last)sospi.GetComponent<Sospe>().last_cre = true;
 		Sospe script_sos =sospi.GetComponent<Sospe>();
 		script_sos.sospi_num=fila_sos;
 		int sos_info = array_total_sos[fila_sos];
@@ -126,7 +128,7 @@ public class Cre_des_sos : MonoBehaviour {
 		float temps=1f;
 		while(fila_sos<4)
 		{
-			Crear_sospitos(fila_sos);
+			Crear_sospitos(fila_sos,false);
 			fila_sos++;
 			temps=temps-0.1f;   
 			yield return new WaitForSeconds(temps);
@@ -136,8 +138,11 @@ public class Cre_des_sos : MonoBehaviour {
 
 	IEnumerator Base_joc()
 	{
+		bool joc = true;
+		bool molts_sos = true;
+		bool una_veg = true;
 		Component[] fills_Sospi;
-		while(array_total_sos.Count(s => s != 0)>4)
+		while(joc)
 		{
 
 			if (Input.GetMouseButtonDown(0) && dret.HitTest(Input.mousePosition) && gou==true)
@@ -145,15 +150,17 @@ public class Cre_des_sos : MonoBehaviour {
 			StartCoroutine(Refresh());
 			//Debug.Log("dret");
 			fills_Sospi=GetComponentsInChildren<Sospe>();
-			foreach(Sospe fill_sospi in fills_Sospi) fill_sospi.Seguent(true);
-			Crear_sospitos(fila_sos);			
+			foreach(Sospe fill_sospi in fills_Sospi) fill_sospi.Seguent(true,molts_sos);
+			if(molts_sos)Crear_sospitos(fila_sos,false);			
 			fila_sos++;			
 			if(fila_sos>24)
 				{
 				    fila_sos=0;
 				    while(array_total_sos[fila_sos]==0)fila_sos++;	
-				}else{
-					while(array_total_sos[fila_sos]==0){						
+				}else
+				{
+					while(array_total_sos[fila_sos]==0)
+					{						
 						fila_sos++;
 						if(fila_sos>24)fila_sos=0;
 					}	
@@ -165,19 +172,38 @@ public class Cre_des_sos : MonoBehaviour {
 			{
 			StartCoroutine(Refresh());
 			//Debug.Log("esquerre");
+			
 			fills_Sospi=GetComponentsInChildren<Sospe>();
-			foreach(Sospe fill_sospi in fills_Sospi) fill_sospi.Seguent(false);
-			Crear_sospitos(fila_sos);
-			fila_sos++;				
+			foreach(Sospe fill_sospi in fills_Sospi) fill_sospi.Seguent(false,molts_sos);						
+			if(molts_sos)Crear_sospitos(fila_sos,false);
+			fila_sos++;	
+			if(array_total_sos.Count(s => s != 0)<6)molts_sos=false;
+			if(array_total_sos.Count(s => s != 0)==1)joc=false;
 				if(fila_sos>24)
 				{
 					fila_sos=0;
 					while(array_total_sos[fila_sos]==0)fila_sos++;	
-				}else{
-					while(array_total_sos[fila_sos]==0){
+				}else
+				{
+					while(array_total_sos[fila_sos]==0)
+					{
 						fila_sos++;
 						if(fila_sos>24)fila_sos=0;
-					}	
+
+					}
+					if(!molts_sos && una_veg)
+					{
+						una_veg=false;
+						Crear_sospitos(fila_sos,true);
+						fila_sos++;
+						if(fila_sos>24)fila_sos=0;
+						while(array_total_sos[fila_sos]==0)
+						{
+							fila_sos++;
+							if(fila_sos>24)fila_sos=0;
+							
+						}
+					}
 				} 
 			}	
 
@@ -189,10 +215,24 @@ public class Cre_des_sos : MonoBehaviour {
 
 	}
 
+
 	IEnumerator Refresh(){
 		gou=false;
 		yield return new WaitForSeconds(0.3f);
 		gou=true;
+	}
+
+	IEnumerator Comp_en(){
+		GameObject sosps = gameObject.transform.GetChild(0).gameObject;
+		int num_sos = sosps.GetComponent<Sospe>().sospi_num;
+		if(culpable==num_sos)
+		{
+			text_fin.text="WIN";
+		}else
+		{
+			text_fin.text="LOSE";
+		}
+		yield return null;
 	}
 	
 }
