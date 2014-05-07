@@ -54,7 +54,7 @@ TextureImporter:
         height: 82
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_1
+    - name: 0
       rect:
         serializedVersion: 2
         x: 26
@@ -63,7 +63,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_2
+    - name: 0
       rect:
         serializedVersion: 2
         x: 26
@@ -72,7 +72,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_3
+    - name: 1
       rect:
         serializedVersion: 2
         x: 24
@@ -81,7 +81,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_4
+    - name: 1
       rect:
         serializedVersion: 2
         x: 143
@@ -90,7 +90,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_5
+    - name: 0
       rect:
         serializedVersion: 2
         x: 142
@@ -99,7 +99,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_6
+    - name: 0
       rect:
         serializedVersion: 2
         x: 142
@@ -108,7 +108,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_7
+    - name: 1
       rect:
         serializedVersion: 2
         x: 228
@@ -117,7 +117,7 @@ TextureImporter:
         height: 70
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: spritecompf_8
+    - name: 0
       rect:
         serializedVersion: 2
         x: 227
@@ -126,7 +126,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: .489157259, y: .71091342}
-    - name: spritecompf_9
+    - name: 0
       rect:
         serializedVersion: 2
         x: 133

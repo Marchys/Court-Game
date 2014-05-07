@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: aae3928c7763d5245938d0e19cf4c313
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: 11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 760
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 760
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 760
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 760
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 680
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 680
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: 11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: "Sheet CuerposF_1\xBA"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_19
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_22
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: 10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 280
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 280
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_27
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 280
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_28
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 280
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: 00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_36
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sheet CuerposF_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 40
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

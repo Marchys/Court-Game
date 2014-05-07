@@ -9,7 +9,11 @@ public class Sospe : MonoBehaviour {
 	Cre_des_sos script_master;
 	public int po_num = 5;
     public bool last_cre = false;
-	bool pos1=true;
+	public int coss;
+	public bool culpable = false;
+	Animator anim_cos;
+	Animator anim_cap;
+
 	// posicio actual
     bool primera = false;
 
@@ -29,31 +33,34 @@ public class Sospe : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+
+		anim_cos = transform.GetChild(4).GetComponent<Animator>();
+		anim_cap = GetComponent<Animator>();
+		anim_cos.SetInteger("cos", coss);
+		anim_cap.SetInteger("Movimentes",50);	
 		script_master =transform.parent.gameObject.GetComponent<Cre_des_sos>();	
 		posicions_master=GameObject.FindWithTag("Posicions");
 		if (!last_cre) {
-						 GameObject sospitosos_master = GameObject.FindWithTag ("Master");
-						 posi = sospitosos_master.GetComponent<Cre_des_sos> ().li_posis;
-						 for (int i=1; i<=4; i++) 
-			             {
+						GameObject sospitosos_master = GameObject.FindWithTag ("Master");
+						posi = sospitosos_master.GetComponent<Cre_des_sos> ().li_posis;
+						for (int i=1; i<=4; i++) {
 
-								if (posi [i - 1] == 0) 
-				                {
+								if (posi [i - 1] == 0) {
 										obj_pos = i + 1;
 										posi [i - 1] = 1;
 										break;
 								}
 						
-			             }
-			             StartCoroutine(Next_position(false,true));
-		               } else obj_pos = po_num;
-		
+						}
+						StartCoroutine (Next_position (false, true));
+				} else obj_pos = po_num;
+		       
+	
 		
 	}
 	
 	public void Seguent(bool ve, bool po)
 	{
-
 		if(!po && !ve)po_num--;
 		if(saliendo==false)
 		{
@@ -100,16 +107,19 @@ public class Sospe : MonoBehaviour {
 		else obj_pos--;	
 		if(obj_pos==1)primera=true;
 		target = posicions_master.transform.Find("0"+obj_pos+"_pos");
+		anim_cos.SetInteger("Moviment",1);
+		anim_cap.SetInteger("Movimentes",2);
 		while(Vector2.Distance(transform.position,target.position)>0.1)		
 		{
 			float step = velocitat * Time.deltaTime;
 			transform.position = Vector2.MoveTowards(transform.position, target.position, step);
 			yield return null;
 		}
+		anim_cos.SetInteger("Moviment",0);
+        anim_cap.SetInteger("Movimentes",1);
 		if(!pocs && gir) canviar_capa("Davant");
 		
 		if(obj_pos==0 || obj_pos==-1 )Destroy(gameObject);
-
 
 	}
 
