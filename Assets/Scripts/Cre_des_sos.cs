@@ -146,6 +146,7 @@ public class Cre_des_sos : MonoBehaviour
 			else Sprite_base.RemoveAt(ordenat[i]);
 		}
 
+		//Debug.Log(avis);
 		switch (avis) 
 		{
 		case 0:
@@ -168,9 +169,9 @@ public class Cre_des_sos : MonoBehaviour
 						else llista_1_ex.Add(cont);
 						break;
 					case 1:
+						if(sas.name!=car_sos_c_s[1]+car_sos_c_s[2])llista_2_ex.Add(cont);
 						if(sas.name==car_sos_c_s[1]+car_sos_c_s[2])llista_2.Add(cont);
-						else llista_2_ex.Add(cont);
-						if(sas.name==temp_cs)llista_2_01.Add(cont);
+						else if(sas.name==temp_cs)llista_2_01.Add(cont);
 						else if(sas.name==temp_se+car_sos_c_s[1])llista_2_02.Add(cont);
 						else llista_2_03.Add(cont);
 						break;					
@@ -276,6 +277,8 @@ public class Cre_des_sos : MonoBehaviour
 		l_2_2=llista_2_02.Count;
 		l_2_3=llista_2_03.Count;
 
+
+
 		num_caps = caps_spirites.Length;
 		num_ulls = ulls_spirites.Length;
 		num_boques = boques_spirites.Length;
@@ -312,19 +315,19 @@ public class Cre_des_sos : MonoBehaviour
 		
 		}
 
-		for (int t = 0; t < array_total_sos.Length; t++ )
-			
-		{
-			
-			int tmp = array_total_sos[t];
-			
-			int r = Random.Range(t, array_total_sos.Length);
-			
-			array_total_sos[t] = array_total_sos[r];
-			
-			array_total_sos[r] = tmp;
-			
-		}
+//		for (int t = 0; t < array_total_sos.Length; t++ )
+//			
+//		{
+//			
+//			int tmp = array_total_sos[t];
+//			
+//			int r = Random.Range(t, array_total_sos.Length);
+//			
+//			array_total_sos[t] = array_total_sos[r];
+//			
+//			array_total_sos[r] = tmp;
+//			
+//		}
 		yield return null;
 	}
 	#endregion
@@ -408,7 +411,6 @@ public class Cre_des_sos : MonoBehaviour
 	    switch(avis)
 		{
 		case 0:
-
 			for(int soc=0; soc<=3;soc++)
 			{
 
@@ -599,7 +601,7 @@ public class Cre_des_sos : MonoBehaviour
 			yield return null;
 		}
 
-		Camera.main.cullingMask = 1 | 1<<10;
+		//Camera.main.cullingMask = 1 | 1<<10;
 		check_but.guiTexture.enabled = false;
 		yield return null;
 	}
