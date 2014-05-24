@@ -146,7 +146,7 @@ public class Cre_des_sos : MonoBehaviour
 			else Sprite_base.RemoveAt(ordenat[i]);
 		}
 
-		//Debug.Log(avis);
+
 		switch (avis) 
 		{
 		case 0:
@@ -315,19 +315,19 @@ public class Cre_des_sos : MonoBehaviour
 		
 		}
 
-//		for (int t = 0; t < array_total_sos.Length; t++ )
-//			
-//		{
-//			
-//			int tmp = array_total_sos[t];
-//			
-//			int r = Random.Range(t, array_total_sos.Length);
-//			
-//			array_total_sos[t] = array_total_sos[r];
-//			
-//			array_total_sos[r] = tmp;
-//			
-//		}
+		for (int t = 0; t < array_total_sos.Length; t++ )
+			
+		{
+			
+			int tmp = array_total_sos[t];
+			
+			int r = Random.Range(t, array_total_sos.Length);
+			
+			array_total_sos[t] = array_total_sos[r];
+			
+			array_total_sos[r] = tmp;
+			
+		}
 		yield return null;
 	}
 	#endregion
@@ -601,7 +601,7 @@ public class Cre_des_sos : MonoBehaviour
 			yield return null;
 		}
 
-		//Camera.main.cullingMask = 1 | 1<<10;
+		Camera.main.cullingMask = 1 | 1<<10;
 		check_but.guiTexture.enabled = false;
 		yield return null;
 	}
@@ -751,8 +751,13 @@ public class Cre_des_sos : MonoBehaviour
 
 	#region Comp_en
 	IEnumerator Comp_en(){
-		GameObject sosps = gameObject.transform.GetChild(0).gameObject;
-		bool culp = sosps.GetComponent<Sospe>().culpable;
+		bool culp=false;
+		foreach (Transform fills in transform)
+		{
+			bool temp_cul=fills.GetComponent<Sospe>().culpable;
+			if(temp_cul)culp = temp_cul;
+		}
+
 		if(!culp)
 		{
 			text_fin.text="LOSE";

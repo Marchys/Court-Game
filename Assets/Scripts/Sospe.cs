@@ -34,6 +34,11 @@ public class Sospe : MonoBehaviour {
 	void Start ()
 	{
 
+//		if(culpable==true){
+//
+//			Transform ors=gameObject.transform.GetChild(0);
+//		    ors.GetComponent<SpriteRenderer>().color = Color.red;
+//		}
 		anim_cos = transform.GetChild(4).GetComponent<Animator>();
 		anim_cap = GetComponent<Animator>();
 		anim_cos.SetInteger("cos", coss);
